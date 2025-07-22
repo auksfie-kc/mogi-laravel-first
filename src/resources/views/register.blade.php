@@ -11,6 +11,18 @@
         <a class="header__logo" href="/register">
         Coachtech
         </a>
+        <nav>
+         <ul class="header-nav">
+         @if (Auth::check())
+           <li class="header-nav__item">
+             <form action="/logout" method="post">
+             @csrf 
+             <button class="header-nav__button">
+             ログアウト</button>
+           </li>
+         @endif
+         </ul>
+        </nav>
       </div>
     </header>
 
@@ -87,7 +99,7 @@
 
   <!-- ログイン画面へ行くボタン -->
   <form action="/login" method="GET">
-        <button type="submit">ログインはこちら</button>
+        <button>ログインはこちら</button>
     </form>
 
       

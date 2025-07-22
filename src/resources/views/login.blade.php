@@ -14,7 +14,7 @@
       </div>
     </header>
 
-    <main>
+  <main>
     <div class="register-form__content">
       
       <div class="register-form__heading">
@@ -22,48 +22,48 @@
       </div>
 
       <!--送信-->
-      <form class="form" action="/login" method="POST">
+    <form class="form" action="/login" method="POST">
       @csrf
 
       
 
-  <!-- メールアドレス -->
-  <div class="form__group">
-    <div class="form__group-title">
+      <!-- メールアドレス -->
+      <div class="form__group">
+      <div class="form__group-title">
         <span class="form__label--item">メールアドレス</span>
-    </div>
-    <div class="form__input--text">
+      </div>
+      <div class="form__input--text">
         <input type="email" name="email" value="{{ old('email') }}">
-    </div>
-  </div>
+      </div>
+      </div>
 
 
-  <!-- パスワード -->
-  <div class="form__group">
-    <div class="form__group-title">
+      <!-- パスワード -->
+      <div class="form__group">
+      <div class="form__group-title">
         <span class="form__label--item">パスワード</span>
-    </div>
-    <div class="form__input--text">
+      </div>
+      <div class="form__input--text">
         <input type="password" name="password" >
-    </div>
-  </div>
+      </div>
+      </div>
 
 
   
 
-  <div class="form__button">
+      <div class="form__button">
       <button class="form__button-submit" type="submit">ログインする</button>
-  </div>
+      </div>
+    </form>
 
 
 
-  <!-- 会員登録画面へ行くボタン -->
-  <form action="/register" method="GET">
+    <!-- 会員登録画面へ行くボタン -->
+    <form action="/register" method="GET">
         <button type="submit">会員登録はこちら</button>
     </form>
 
-      </>
     </div>
-    </main>
+  </main>
 </body>
 </html>

@@ -19,7 +19,11 @@
       <div class="register-form__heading">
         <h2>商品一覧トップ画面（ログイン前）</h2>
       </div>
-</div>
+
+      <a href="/">おすすめ</a>
+      <a href="/?page=mylist">マイリスト</a>
+
+    </div>
 </main>
 </body>
 </html>

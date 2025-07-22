@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coachtech</title>
-
-
 </head>
 <body>
     <header>
@@ -17,7 +15,7 @@
          <ul class="header-nav">
          @if (Auth::check())
            <li class="header-nav__item">
-             <form action="/logout" method="post">
+             <form action="/logout" method="POST">
              @csrf 
              <button class="header-nav__button">
              ログアウト</button>
@@ -28,14 +26,19 @@
       </div>
     </header>
 
-
-  <main>
-    <div>認証しました
+    <main>
+    <div class="register-form__content">
+      <div class="register-form__heading">
+        <h2>商品一覧トップ画面（ログイン後）</h2>
+      </div>
+      <h2>ようこそ {{ Auth::user()->name }} さん！</h2>
+      <p>ここは会員専用ページです。マイリスト</p>
+      
+      <form method="POST" action="{{ route('logout') }}">
+      @csrf
+      <button type="submit">ログアウト</button>
+      </form>
     </div>
-    <h1>ようこそ {{ Auth::user()->name }} さん！</h1>
-     <p>ここは会員専用プロフィール設定ページです。</p>
-    
-  </main>
-
+</main>
 </body>
 </html>

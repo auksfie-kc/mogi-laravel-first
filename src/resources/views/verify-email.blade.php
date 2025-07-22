@@ -6,6 +6,10 @@
     <title>Coachtech</title>
 </head>
 <body>
-    
+    <form method="POST" action="{{route('logout')}}">
+        @csrf
+        <button type="submit">ログアウト</button>
+        <div>メールを送信しました。認証ボタンを押してください。</div>
+</form>
 </body>
 </html>

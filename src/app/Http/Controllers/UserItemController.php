@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class UserItemController extends Controller
 {
     public function index()
 {
-    return view('item_list');
+    return view('mylist');
 
 }
 }
-
